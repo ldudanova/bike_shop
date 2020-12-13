@@ -1,0 +1,46 @@
+.btn{
+  box-sizing: border-box;
+
+  &:not(:disabled):not(.disabled) {
+    &:active,
+    &.active {
+      opacity: 0.8;
+    }
+  }
+
+  &_link{
+    text-decoration: none;
+    color: $black;
+    text-decoration: none !important;
+    padding: 0 !important;
+
+    &:hover,&:focus {
+      color: $primary !important;
+      outline: none !important;
+    }
+
+  }
+
+  &_bold {
+    font-weight: bold;
+  }
+
+  &_uppercase {
+    text-transform: uppercase;
+  }
+
+  &_lg {
+    min-height: 56px;
+    padding: 16px 32px;
+  }
+}
+
+.btn-primary {
+  background: $primary !important;
+  color: $white;
+  border: none !important;
+
+  &:hover, &:focus {
+    background: $primary-dark!important;
+  }
+}
