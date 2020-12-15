@@ -27,6 +27,18 @@
     flex-direction: column;
     align-items: center;
     margin-right: 27px;
+    @media screen and (max-width: $lg){
+      display: none;
+    }
+  }
+  &__icon-phone{
+    display: none;
+    a:focus{
+       box-shadow: none !important;
+    }
+    @media screen and (max-width: $lg){
+      display: flex;
+    }
   }
 
   &__phone-link{
@@ -37,10 +49,20 @@
     width: 24px;
     margin-left: 24px;
     margin-right: 6px;
+    @media (max-width: $md) {
+      margin-left: 0;
+    }
     &:hover, &:focus{
       .badge-primary{
         background-color: $primary-dark !important;
       }
+    }
+  }
+
+  &__call-back {
+    display: block;
+    @media (max-width: $md) {
+        display: none;
     }
   }
 

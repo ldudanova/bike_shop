@@ -29,10 +29,6 @@
 
 <style lang="scss">
     .main-wrapper{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         margin: 0 auto;
         padding-top: 80px;
     }

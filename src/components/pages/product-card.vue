@@ -1,6 +1,8 @@
 <template>
     <div class="product-card">
+        <div class="wrapper product-card__breadcrumbs">
         <Breadcrumbs/>
+        </div>
         <div class="wrapper product-card__title">
             <h1 class="h1">SUBROSA ALTUS 14" 2021 BMX BIKE</h1>
         </div>
@@ -8,22 +10,24 @@
             <div class="product-card__grid">
                 <div class="product-card__column product-card__column_left">
                     <div class="product-card__photo-container">
+
                         <!--Swiper-->
                         <div class="product-slider">
                             <div class="swiper-container">
-
+                                <SwiperSlider/>
                             </div>
                         </div>
-                        <div class="custom-photos"></div>
+
                     </div>
                 </div>
-                <div class="product-card__column product-card__column_right"></div>
+                <div class="product-card__column product-card__column_right">
+                    <!--  Aside panel START  -->
+                        <aside-panel/>
+                    <!--  Aside panel END    -->
+                </div>
                 <div class="product-card__column product-card__column_left">
                     <div class="product-card__info">
-                        <div class="info-tabs">
-                            <nav></nav>
-                            <div class="tab-content" id="nav-tabContent"></div>
-                        </div>
+                        <info-tabs/>
                     </div>
                 </div>
             </div>
@@ -33,6 +37,10 @@
 
 <script>
     import Breadcrumbs from '../elements/Breadcrumbs'
+    import SwiperSlider from '../elements/SwiperSlider.vue';
+    import infoTabs from '../elements/info-tabs.vue';
+    import AsidePanel from "../elements/aside-panel";
+
 
     export default {
         name: 'product-card',
@@ -42,16 +50,14 @@
         },
         computed: {},
         components: {
+            AsidePanel,
             Breadcrumbs,
-
+            SwiperSlider,
+            infoTabs
         }
     }
 </script>
 
 <style lang="scss">
-    .product-card{
-        width: 100%;
-        height: 100%;
 
-    }
 </style>

@@ -1,3 +1,11 @@
+.iconic-text{
+  display: flex;
+  align-items: center;
+  &__icon{
+    width: 100%;
+  }
+}
+
 .cart-icon{
   width: 24px;
   height: 24px;
