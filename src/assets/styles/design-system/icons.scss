@@ -1,0 +1,38 @@
+.iconic-text{
+  display: flex;
+  align-items: center;
+  &__icon{
+    width: 100%;
+  }
+}
+
+.cart-icon{
+  width: 24px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+
+  svg{
+    path {
+      fill: $white;
+      @extend %fastTransition;
+    }
+  }
+
+  &:hover, &:focus{
+    color: $primary-dark;
+
+    svg{
+      path {
+        fill: $primary-dark;
+      }
+    }
+  }
+
+  &__badge{
+    position: absolute;
+    top: -6px;
+    right: -6px;
+  }
+}
+

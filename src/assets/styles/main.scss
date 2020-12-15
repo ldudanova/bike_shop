@@ -1,0 +1,111 @@
+@import 'variables.scss';
+
+h1, h2, h3, h4, p{
+  font-family: "Helvetica","Arial","Roboto",sans-serif;
+}
+
+.h1{
+  font-weight: 700 !important;
+  letter-spacing: .03rem;
+  line-height: 1.714rem !important;
+  font-size: 1.428rem !important;
+  margin: 0 0 1rem;
+}
+
+.subtitle-1{
+  font-weight: 700;
+  font-size: 1.143rem;
+}
+
+.primary{
+    path {
+      fill: $primary;
+    }
+  }
+.secondary{
+  path {
+    fill: $white;
+  }
+  &:hover, &:focus{
+    path{
+      fill: $primary-dark;
+    }
+  }
+}
+.wrapper {
+  width: 1280px;
+  margin: auto;
+
+  @media screen and (max-width: $xxxl){
+    padding: 0 40px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  @media screen and (max-width: $lg){
+  padding: 0 16px;
+  }
+  @media screen and (max-width: $sm){
+    padding: 0 10px;
+  }
+
+}
+
+ul{
+  list-style: none;
+}
+
+.collapse-toggle {
+  &__text {
+    margin-right: 10px;
+
+    &_show {
+      display: flex;
+      width: 100%;
+    }
+
+    &_hide {
+      display: none;
+    }
+  }
+
+  &__icon {
+    transition: .2s;
+  }
+
+  &.collapse-toggle_show {
+    display: flex;
+    width: fit-content;
+  }
+  &.collapse-toggle_hide {
+    display: none;
+  }
+
+  &[aria-expanded="true"] {
+    &.collapse-toggle_show {
+      display: none;
+    }
+    &.collapse-toggle_hide {
+      display: flex;
+      width: fit-content;
+    }
+
+    .collapse-toggle__icon,
+    .iconic-text__icon {
+      transform: rotate(180deg);
+    }
+
+    .collapse-toggle {
+      &__text {
+        &_show {
+          display: none;
+        }
+
+        &_hide {
+          display: flex;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

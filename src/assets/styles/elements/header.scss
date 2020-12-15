@@ -1,0 +1,89 @@
+.header{
+  position: fixed;
+  width: 100%;
+  height: 72px;
+  top: 0;
+  z-index: 9;
+  margin-right: 0;
+  background-color: #000;
+  display: flex;
+
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__column{
+    display: flex;
+    align-items: center;
+
+    &_right{
+      justify-content: flex-end;
+    }
+  }
+  &__phones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 27px;
+    @media screen and (max-width: $lg){
+      display: none;
+    }
+  }
+  &__icon-phone{
+    display: none;
+    a:focus{
+       box-shadow: none !important;
+    }
+    @media screen and (max-width: $lg){
+      display: flex;
+    }
+  }
+
+  &__phone-link{
+    color: $white !important;
+  }
+
+  &__cart{
+    width: 24px;
+    margin-left: 24px;
+    margin-right: 6px;
+    @media (max-width: $md) {
+      margin-left: 0;
+    }
+    &:hover, &:focus{
+      .badge-primary{
+        background-color: $primary-dark !important;
+      }
+    }
+  }
+
+  &__call-back {
+    display: block;
+    @media (max-width: $md) {
+        display: none;
+    }
+  }
+
+  &__logo{
+    &:hover, &:focus {
+      svg {
+        path:nth-child(2){
+          fill: $primary;
+          @extend %mediumTransition;
+        }
+        path:nth-child(3){
+          fill: $primary;
+          @extend %mediumTransition;
+        }
+        path:last-child{
+          fill: $white;
+          @extend %mediumTransition;
+        }
+      }
+
+    }
+  }
+}
+

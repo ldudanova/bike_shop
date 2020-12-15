@@ -1,0 +1,46 @@
+.breadcrumb{
+  background-color: transparent !important;
+  color: $black !important;
+  margin: 0 !important;
+  padding: 0;
+  flex-wrap: nowrap !important;
+  display: flex;
+  font-size: .857rem;
+  @media only screen and (max-width: $sm){
+    overflow-x: scroll;
+  }
+
+  .breadcrumb-item{
+    display: flex;
+    flex-wrap: nowrap;
+    color: $black !important;
+    white-space: nowrap;
+    a{
+      text-decoration: none!important;
+      color: #ccc !important;
+    }
+    &:hover:not(.active) + ::before
+    {
+      color: $primary-dark !important;
+    }
+    &:hover:not(.active)>a{
+      color: $primary-dark !important;
+    }
+    &::before
+    {
+      color: #ccc !important;
+    }
+    &:last-child {
+      display: block;
+      list-style-position: inside !important;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      @media only screen and (max-width: $sm){
+        overflow: visible;
+      }
+    }
+
+  }
+}
+

@@ -1,0 +1,9 @@
+.select{
+  width: 100%;
+  border: 2px solid #505456;
+  padding: .75rem 1rem;
+  &:focus{
+    border-color: $primary-dark;
+  }
+
+}

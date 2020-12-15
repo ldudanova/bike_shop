@@ -1,0 +1,19 @@
+%removeUserSelect {
+  user-select: none;
+
+  & * {
+    user-select: none;
+  }
+}
+
+%fastTransition {
+  transition: 0.2s all;
+}
+
+%mediumTransition {
+  transition: 0.4s all;
+}
+
+%slowTransition {
+  transition: 0.65s all;
+}
